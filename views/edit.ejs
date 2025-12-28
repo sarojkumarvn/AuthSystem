@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-zinc-900 text-white">
+
+
+    <div class="max-w-3xl mx-auto px-6 mt-10">
+        <h1>You Can Edit Your Post Here</h1>
+
+     
+
+       
+        <div class="bg-zinc-800 p-4 rounded-lg mb-6">
+            <form action="/update/<%= post._id %>" method="post">
+
+                <textarea
+                    rows="3"
+                    name="content"
+                    placeholder="Edit Your Post"
+                    class="w-full bg-zinc-700 text-white px-4 py-3 rounded-md outline-none resize-none mb-4"
+                > <%= post.content %> </textarea>
+
+                <input type="submit"
+                    value="Update Post"
+                    class="bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded-md">
+
+                    
+            </form>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
